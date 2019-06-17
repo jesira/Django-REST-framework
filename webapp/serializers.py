@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from . models import Employee
+from . models import Employee,Owner
 
 
 class EmployeeSerializer(serializers.ModelSerializer):
@@ -8,3 +8,8 @@ class EmployeeSerializer(serializers.ModelSerializer):
 #       fields = ('firstname', 'lastname')
         fields = '__all__'
 
+class OwnerSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Owner
+#       fields = ('firstname', 'lastname')
+        fields = '__all__'

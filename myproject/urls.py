@@ -20,5 +20,8 @@ from webapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('employees/', views.EmployeeList.as_view())
+    path('api/', views.EmployeeList.as_view()),
+    path('api/<id>/', views.EmployeeList.as_view()),
+    path('owner/', views.OwnerList.as_view()),
+    path('owner/<id>/', views.OwnerList.as_view())
 ]
